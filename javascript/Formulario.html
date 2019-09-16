@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio dom eventos y funciones</title>
+    <script type="text/javascript" src="js/003-EjercicioDOM.js"></script>
+</head>
+
+<body>
+    <!--
+        1. formulario campos nombre, apellido, edad
+        2. boton furmulario: evento submit
+        3. al dar click al boton mostrar los datos del formulario
+    -->
+    <div class="box">
+        <form action="" method="post" id='formulario' onsubmit="return false">
+            <label for="nombre">nombre:</label><br>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="apellidos">apellidos:</label><br>
+            <input type="text" name="apellidos" id="apellidos"><br>
+            <label for="edad">edad:</label><br>
+            <input type="text" name="edad" id="edad"><br>
+            <input type="submit" value="Enviar" id=submit><br>
+        </form>
+    </div>
+    <div class="box dashed">
+
+    </div>
+</body>
+
+</html>

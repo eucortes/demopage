@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--  
+    <meta charset="ISO-8859-1">
+         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="es" />
+  -->
+    <title>Proyecto con Javascript</title>
+    <!--Estilos CSS-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link id="theme" rel="stylesheet" href="css/green.css">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--JQuery UI-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+
+
+
+    <!--Mis Scripts-->
+    <script type="text/javascript" src="js/about.js"></script>
+</head>
+
+<body>
+    <div id='theme-selector'>
+        <div id='to-green'></div>
+        <div id='to-red'></div>
+        <div id='to-blue'></div>
+    </div>
+    <section id='global'>
+        <header>
+            <div id='logo'>
+                <h1>Proyecto JS</h1>
+            </div>
+            <div class='clearfix'></div>
+            <nav id='menu'>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Sobre Mi</a></li>
+                    <li><a href="#">Reloj</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--
+    slider
+-->
+
+        <section id='content'>
+            <div id='box'>
+                <!--Cargar acordeon-->
+                <div id='acordeon'></div>
+            </div>
+            <aside id='sidebar'>
+                <div id='about'>
+                    <h4><span>¿quien soy?</span></h4>
+                    <img src="img/caracol.jpg" />
+                    <p>Aliquam sem et tortor consequat id porta nibh venenatis. Neque volutpat ac tincidunt vitae
+                        semper
+                    </p>
+                </div>
+                <div id='login'>
+                    <h4><span>identifícate</span></h4>
+                    <form action="">
+                        <label for='name'>Nombre</label>
+                        <input type="text" name="name" id='form_name'>
+                        <label for='email'>Correo</label>
+                        <input type="text" name="email" id='form_email'>
+                        <label for='password'>Pasword</label>
+                        <input type="password" name="password" id='form_password'>
+                        <input type="submit" value="Entrar" id='boton_entrar'>
+                    </form>
+                </div>
+            </aside>
+            <div class='clearfix'></div>
+        </section>
+    </section>
+    <footer>
+        Edgar Cortes ®
+        <a href="#" class="subir">Ir Arriba</a>
+    </footer>
+</body>
+
+</html>
