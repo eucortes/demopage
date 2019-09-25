@@ -15,17 +15,20 @@
     <link rel="stylesheet" href="css/styles.css">
     <link id="theme" rel="stylesheet" href="css/green.css">
     <!--JQuery-->
-    <!--slider-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!--momentjs-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+
+    <!--JQuery UI-->
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
+
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+
+
 
     <!--Mis Scripts-->
-    <script type="text/javascript" src="js/global.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/about.js"></script>
 </head>
 
 <body>
@@ -44,22 +47,24 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="about.html">Sobre Mi</a></li>
-                    <li><a href="reloj.html">Reloj</a></li>
+                    <li><a href="#">Reloj</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
         </header>
-        <!--    slider-->
-        <div id=slider>
-            <div class="bxslider">
-                <div><img src="img/cielo.jpg" title="Cielo"></div>
-                <div><img src="img/hojas.jpg" title="Hojas"></div>
-                <div><img src="img/rojo.jpg" title="Rojo"></div>
-            </div>
-        </div>
+        <!--
+    slider
+-->
+
         <section id='content'>
-            <div id='posts'>
-                <!--Cargar posts desde json-->
+            <div id='box'>
+                <!--Cargar acordeon-->
+                <div id='acordeon'>
+                    <h3></h3>
+                    <h3></h3>
+                    <h3></h3>
+
+                </div>
             </div>
             <aside id='sidebar'>
                 <div id='about'>
@@ -71,7 +76,7 @@
                 </div>
                 <div id='login'>
                     <h4><span>identifícate</span></h4>
-                    <form name='Forma' onsubmit="return false">
+                    <form action="">
                         <label for='name'>Nombre</label>
                         <input type="text" name="name" id='form_name'>
                         <label for='email'>Correo</label>

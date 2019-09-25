@@ -1,0 +1,10 @@
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+#box h2{
+        font-size: 30;
+    color:red;
+    /* #333;*/
+}
