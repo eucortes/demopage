@@ -56,4 +56,3 @@ $(document).ready(function () {
         ActualizaLogin()
         return false;
     })
-})
