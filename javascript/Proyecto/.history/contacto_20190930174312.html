@@ -19,13 +19,13 @@
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <!--JQuery UI-->
+    <!--JQuery UI
     <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css" />
     <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.min.css" />
     <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
 
     <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
-
+-->
     <!--form validator-->
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
@@ -67,20 +67,20 @@
                 <h2>Contacto</h2>
                 <form action="" method="POST" id="form_contact">
                     <label for="name">Nombre</label>
-                    <input type="text" name="name" data-validation="alphanumeric">
+                    <input type="text" name="name" id="">
                     <label for="surname">Apellidos</label>
-                    <input type="text" name="surname" data-validation="alphanumeric">
+                    <input type="text" name="surname" id="">
                     <label for="email">Email</label>
-                    <input type="email" name="email" data-validation="email">
+                    <input type="email" name="email" id="">
                     <label for="sex">Sexo</label>
-                    <select name="sex" data-validation="required">
+                    <select name="sex" id="">
                         <option value="man">Hombre</option>
                         <option value="woman">Mujer</option>
                     </select>
                     <label for="date">Fecha de Nacimiento</label>
-                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy">
+                    <input type="text" name="date" id="">
                     <label for="edad">Edad</label>
-                    <input type="number" name="edad" data-validation="number">
+                    <input type="number" name="edad" id="">
                     <input type="submit" value="Enviar">
 
                 </form>
