@@ -1,31 +1,29 @@
 import { Component, OnInit } from "@angular/core";
 import { Zapatilla } from "../models/zapatilla";
+import { ZapatillaService } from "../service/zapatilla.service";
 
 @Component({
   selector: "zapatillas",
-  templateUrl: "./zapatillas.component.html"
+  templateUrl: "./zapatillas.component.html",
+  styleUrls: ["./zapatillas.component.css"],
+  providers: [ZapatillaService]
 })
 export class ZapatillasComponent implements OnInit {
   public titulo: string = "Componente de Zapatillas";
   public zapatillas: Array<Zapatilla>;
   public marcas: string[];
   public color: string;
-  public mi_marca: string;
-  constructor() {
+  public miMarca: string;
+  constructor(private _zapatillaService: ZapatillaService) {
     this.color = "orange";
     this.marcas = new Array();
-    this.zapatillas = [
-      new Zapatilla("Reebok Classic", "Reebok", "Blanco", 100, true),
-      new Zapatilla("Nike Runner", "Nike", "Negro", 80, true),
-      new Zapatilla("Adidas Clasic", "Adidas", "Gris", 60, true),
-      new Zapatilla("Nike Casual", "Nike", "blanco", 80, false)
-    ];
   }
   ngOnInit() {
+    this.zapatillas = this._zapatillaService.zapatillas;
     console.log(this.zapatillas);
     this.getMarcas();
   }
-  getMarcas() {
+  public getMarcas() {
     this.zapatillas.forEach((value, index) => {
       if (this.marcas.indexOf(value.marca) < 0) {
         this.marcas.push(value.marca);
@@ -33,14 +31,20 @@ export class ZapatillasComponent implements OnInit {
       console.log(this.marcas);
     });
   }
-  getMarca() {
-    if (this.marcas.indexOf(this.mi_marca) < 0 && this.mi_marca != "") {
-      this.marcas.push(this.mi_marca);
+  public getMarca() {
+    if (this.marcas.indexOf(this.miMarca) < 0 && this.miMarca !== "") {
+      this.marcas.push(this.miMarca);
     }
-    this.mi_marca = "";
+    this.miMarca = "";
   }
-  deleteMarca(indice) {
+  public deleteMarca(indice) {
     // delete this.marcas[indice];
     this.marcas.splice(indice, 1);
+  }
+  public onBlur() {
+    console.log("has salido del input");
+  }
+  public mostrarPalabra() {
+    alert(this.miMarca);
   }
 }
