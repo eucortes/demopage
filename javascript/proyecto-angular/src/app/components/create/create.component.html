@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>{{ title }}</h2>
+    <div class="message success" *ngIf="status">
+        El proyecto se ha creado correctamente, puedes <a href="#">verlo aquí</a>
+    </div>
+    <div class="message failed" *ngIf="!status">
+        El proyecto NO SE HA PODIDO CREAR
+    </div>
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required />
+            <span class="formError" *ngIf="name.touched && !name.valid">
+        El Nombre es Obligatorio
+      </span>
+        </p>
+        <p>
+            <label for="description">Descripción</label>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <span class="formError" *ngIf="description.touched && !description.valid">
+        la descripción es Obligatoria
+      </span>
+        </p>
+        <p>
+            <label for="category">Categoría</label>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required />
+            <span class="formError" *ngIf="category.touched && !category.valid">
+        la categoría es Obligatoria
+      </span>
+        </p>
+        <p>
+            <label for="year">Año de Lanzmiento</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required />
+            <span class="formError" *ngIf="year.touched && !year.valid">
+        El año es Obligatorio
+      </span>
+        </p>
+        <p>
+            <label for="langs">Lenguajes</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required />
+            <span class="formError" *ngIf="langs.touched && !langs.valid">
+        los lenguajes son Obligatorios
+      </span>
+        </p>
+        <p>
+            <label for="image">Imagen del Proyecto</label>
+            <input type="file" name="image" placeholder="Subir Imagen" #image="ngModel" [(ngModel)]="project.image" required />
+        </p>
+        <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid" />
+    </form>
+</div>
