@@ -1,9 +1,9 @@
 <div class="container">
     <h2>{{ title }}</h2>
-    <div class="message success" *ngIf="status">
+    <div class="message success" *ngIf="status=='success'">
         El proyecto se ha creado correctamente, puedes <a href="#">verlo aquí</a>
     </div>
-    <div class="message failed" *ngIf="!status">
+    <div class="message failed" *ngIf="status=='failed'">
         El proyecto NO SE HA PODIDO CREAR
     </div>
 
@@ -45,7 +45,8 @@
         </p>
         <p>
             <label for="image">Imagen del Proyecto</label>
-            <input type="file" name="image" placeholder="Subir Imagen" #image="ngModel" [(ngModel)]="project.image" required />
+            <input type="file" name="image" placeholder="Subir Imagen" (change)='fileChangeEvent($event)' />
+            <!--#image="ngModel" [(ngModel)]="project.image" required-->
         </p>
         <input type="submit" value="Enviar" [disabled]="!projectForm.form.valid" />
     </form>
