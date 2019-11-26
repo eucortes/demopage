@@ -12,7 +12,10 @@ import { Observable } from 'rxjs';
 })
 export class ProjectsComponent implements OnInit {
   public projects:Project[]
-  constructor(private _projectService: ProjectService) {}
+  public url : string
+  constructor(private _projectService: ProjectService) {
+    this.url=Global.url
+  }
 
   ngOnInit() {
     this.getProjects();
@@ -30,4 +33,5 @@ export class ProjectsComponent implements OnInit {
       }
     );
   }
+
 }

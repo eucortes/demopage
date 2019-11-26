@@ -10,6 +10,7 @@ import { ContactComponent } from "./components/contact/contact.component";
 import { ErrorComponent } from "./components/error/error.component";
 import { routing, appRoutingProviders } from "./routing";
 import { HttpClientModule } from "@angular/common/http";
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from "@angular/common/http";
     ProjectsComponent,
     CreateComponent,
     ContactComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetailComponent
     /*  ,
     HttpClientModule */
   ],
