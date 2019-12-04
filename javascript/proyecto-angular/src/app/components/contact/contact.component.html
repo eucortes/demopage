@@ -1,1 +1,18 @@
-<p>contact works!</p>
+<div class='container'>
+    <h1>Contacto</h1>
+    <div id="texto" #textos>
+        <p appResaltado>esta es la página de contacto, puedes enviar cualquier duda</p>
+    </div>
+
+    <input type="number" [(ngModel)]='widthSlider' (keyup.enter)='cargarSlider()' name='ancho'><br>
+    <button></button>
+    <div *ngIf="widthSlider">
+
+        <slider [anchura]='anchuraToSlider' (getAutor)='autor($event)' *ngIf="existe"></slider>
+    </div>
+    <div *ngIf="autorObject">
+        <strong>Autor: {{autorObject.nombre}}</strong>
+        <div>sitio: {{autorObject.website}}</div>
+    </div>
+
+</div>

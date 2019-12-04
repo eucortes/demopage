@@ -11,7 +11,9 @@ import { ErrorComponent } from "./components/error/error.component";
 import { routing, appRoutingProviders } from "./routing";
 import { HttpClientModule } from "@angular/common/http";
 import { DetailComponent } from './components/detail/detail.component';
-
+import { EditComponent } from './components/edit/edit.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { ResaltadoDirective } from './directives/resaltado.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,10 @@ import { DetailComponent } from './components/detail/detail.component';
     CreateComponent,
     ContactComponent,
     ErrorComponent,
-    DetailComponent
+    DetailComponent,
+    EditComponent,
+    SliderComponent,
+    ResaltadoDirective
     /*  ,
     HttpClientModule */
   ],

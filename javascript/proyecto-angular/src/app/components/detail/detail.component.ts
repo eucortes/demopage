@@ -10,28 +10,44 @@ import {Router, ActivatedRoute,Params} from '@angular/router'
   providers:[ProjectService]
 })
 export class DetailComponent implements OnInit {
-url:string
-project:Project
+public url:string
+public project:Project
+public confirm:boolean
+
   constructor(
     private _projectService:ProjectService,
     private _router:Router,
     private _route:ActivatedRoute
   ) {
     this.url=Global.url
+    this.confirm=false
    }
 
   ngOnInit() {
     this._route.params.subscribe(params=>{
       let id=params.id
       this.getProject(id)
-
     })
   }
-getProject(id){
+  setConfirm(confirm){
+    this.confirm=confirm
+  }
+
+ getProject(id){
   this._projectService.getProject(id).subscribe(response=>{
-this.project=response.project
-  },error=>{
+this.project=  response.project
+console.log("project",this.project)
+  },error=>{ 
     console.log(<any>error)
   })
+}
+deleteProject(id){
+  this._projectService.deleteProject(id).subscribe(response=>{
+    if(response.project){
+      this._router.navigate(['/proyectos'])
+    }
+      },error=>{
+        console.log(<any>error)
+      })
 }
 }
